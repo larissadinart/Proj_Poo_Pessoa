@@ -5,29 +5,64 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Proj_Poo_Pessoa
+
 {
     internal class Pessoa
     {
+        //atributos da classe = variáveis da classe / primeira letra maiúscula.
         String nome;
-        String nascimento;
+        DateTime nascimento;
         String cpf;
         String telefone;
 
-    
-        public Pessoa(String nome, String nascimento, String cpf, String telefone)
+        //métodos = funções da classe
+        public Pessoa() // método construtor
         {
-            this.nome = nome;
-            this.nascimento = nascimento;
-            this.cpf = cpf;
-            this.telefone = telefone;
         }
-        public override string ToString()
+
+        public void setNome()
         {
-            return $"Nome: {nome} \nData Nasc: {nascimento} \nCPF: {cpf} \nTelefone: {telefone}";
+            Console.WriteLine("Informe o nome: ");
+            this.nome = Console.ReadLine();
+        }
+        public void getNome()
+        {
+            Console.WriteLine(this.nome);
+        }
+        public void setNascimento()
+        {
+            Console.WriteLine("Digite a data de nascimento: ");
+            this.nascimento = System.DateTime.Parse(Console.ReadLine());
+        }
+        public void getNascimento()
+        {
+            Console.WriteLine(this.nascimento.ToShortDateString());
+        }
+        public void setCpf()
+        {
+            Console.WriteLine("Digite o CPF: ");
+            this.cpf = Console.ReadLine();
+        }
+        public void getCpf()
+        {
+            Console.WriteLine(this.cpf);
+        }
+        public void setTelefone()
+        {
+            Console.WriteLine("Digite o telefone: ");
+            this.telefone = Console.ReadLine();
+        }
+        public void getTelefone()
+        {
+            Console.WriteLine(this.telefone);
         }
 
     }
 }
+
+
+
+
 
 
 
